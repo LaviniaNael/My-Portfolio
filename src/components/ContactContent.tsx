@@ -1,14 +1,14 @@
 import { Send, AtSign, MessageSquare, Phone, Linkedin, Github, MapPin } from 'lucide-react';
-import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs));
+}
 
 const ContactContent = () => {
-    const [status, setStatus] = useState<string | null>(null);
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus('Packet transmitted via secure tunnel...');
-        setTimeout(() => setStatus(null), 3000);
-    };
+    const [state, handleSubmit] = useForm("xaqwgqge");
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-2">
@@ -56,30 +56,73 @@ const ContactContent = () => {
                 <h3 className="text-xs font-bold text-win-text/60 italic flex items-center gap-2">
                     <MessageSquare size={14} /> Send a message...
                 </h3>
-                <form onSubmit={handleSubmit} className="space-y-3">
-                    <input
-                        type="text"
-                        className="w-full h-8 bg-black/40 win-inset px-2 text-xs outline-none focus:ring-1 focus:ring-win-accent border-none text-win-text"
-                        placeholder="Identity Name"
-                        required
-                    />
-                    <input
-                        type="email"
-                        className="w-full h-8 bg-black/40 win-inset px-2 text-xs outline-none focus:ring-1 focus:ring-win-accent border-none text-win-text"
-                        placeholder="Protocol Address (Email)"
-                        required
-                    />
-                    <textarea
-                        className="w-full h-24 bg-black/40 win-inset p-2 text-xs outline-none focus:ring-1 focus:ring-win-accent border-none text-win-text resize-none"
-                        placeholder="Transmission content..."
-                        required
-                    />
-                    <button className="w-full h-10 win-outset bg-win-surface flex items-center justify-center gap-3 font-bold hover:bg-win-accent hover:text-white transition-all group">
-                        <Send size={16} className="group-hover:translate-x-1 transition-transform" />
-                        TRANSMIT
-                    </button>
-                </form>
-                {status && <p className="text-[10px] text-win-accent text-center animate-pulse font-mono uppercase tracking-widest">{status}</p>}
+
+                {state.succeeded ? (
+                    <div className="win-inset bg-black/20 p-4 border-l-4 border-win-accent animate-in fade-in zoom-in-95">
+                        <p className="text-sm text-win-accent font-bold uppercase tracking-widest mb-2">Transmission Successful</p>
+                        <p className="text-xs text-win-text/80 leading-relaxed font-mono">
+                            Packet received at terminal. Primary protocol acknowledged. Thanks for reaching out!
+                        </p>
+                        <button
+                            onClick={() => window.location.reload()}
+                            className="mt-4 text-[10px] font-bold text-win-accent hover:underline uppercase"
+                        >
+                            Send another transmission?
+                        </button>
+                    </div>
+                ) : (
+                    <form onSubmit={handleSubmit} className="space-y-3">
+                        <div className="space-y-1">
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                className="w-full h-8 bg-black/40 win-inset px-2 text-xs outline-none focus:ring-1 focus:ring-win-accent border-none text-win-text"
+                                placeholder="Identity Name"
+                                required
+                            />
+                            <ValidationError prefix="Name" field="name" errors={state.errors} className="text-[10px] text-red-400 font-mono" />
+                        </div>
+
+                        <div className="space-y-1">
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                className="w-full h-8 bg-black/40 win-inset px-2 text-xs outline-none focus:ring-1 focus:ring-win-accent border-none text-win-text"
+                                placeholder="Protocol Address (Email)"
+                                required
+                            />
+                            <ValidationError prefix="Email" field="email" errors={state.errors} className="text-[10px] text-red-400 font-mono" />
+                        </div>
+
+                        <div className="space-y-1">
+                            <textarea
+                                id="message"
+                                name="message"
+                                className="w-full h-24 bg-black/40 win-inset p-2 text-xs outline-none focus:ring-1 focus:ring-win-accent border-none text-win-text resize-none"
+                                placeholder="Transmission content..."
+                                required
+                            />
+                            <ValidationError prefix="Message" field="message" errors={state.errors} className="text-[10px] text-red-400 font-mono" />
+                        </div>
+
+                        <button
+                            type="submit"
+                            disabled={state.submitting}
+                            className="w-full h-10 win-outset bg-win-surface flex items-center justify-center gap-3 font-bold hover:bg-win-accent hover:text-white transition-all group disabled:opacity-50 disabled:cursor-wait"
+                        >
+                            <Send size={16} className={cn("transition-transform", !state.submitting && "group-hover:translate-x-1")} />
+                            {state.submitting ? 'TRANSMITTING...' : 'TRANSMIT'}
+                        </button>
+
+                        {state.errors && !state.succeeded && (
+                            <p className="text-[10px] text-red-400 font-mono text-center uppercase animate-pulse">
+                                Error: Tunnel stability failed. Check inputs.
+                            </p>
+                        )}
+                    </form>
+                )}
             </div>
         </div>
     );
