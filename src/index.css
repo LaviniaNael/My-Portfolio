@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-win-bg: #120e14;
+  --color-win-surface: #1f1a24;
+  --color-win-header: #2d2633;
+  --color-win-text: #fdf2f8;
+  --color-win-highlight: #4a3b54;
+  --color-win-shadow: #0a080d;
+  --color-win-accent: #ec4899;
+  --color-win-taskbar: #1a151f;
+  --color-win-secondary: #a855f7;
+}
+
+:root {
+  --font-retro: "MS Sans Serif", system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--font-retro);
+  background-color: #0c0c0c;
+  color: #e0e0e0;
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+}
+
+/* Win95 Bevel Effects */
+.win-outset {
+  border-top: 2px solid var(--color-win-highlight);
+  border-left: 2px solid var(--color-win-highlight);
+  border-right: 2px solid var(--color-win-shadow);
+  border-bottom: 2px solid var(--color-win-shadow);
+}
+
+.win-inset {
+  border-top: 2px solid var(--color-win-shadow);
+  border-left: 2px solid var(--color-win-shadow);
+  border-right: 2px solid var(--color-win-highlight);
+  border-bottom: 2px solid var(--color-win-highlight);
+}
+
+.win-button:active {
+  border-top: 2px solid var(--color-win-shadow);
+  border-left: 2px solid var(--color-win-shadow);
+  border-right: 2px solid var(--color-win-highlight);
+  border-bottom: 2px solid var(--color-win-highlight);
+  padding: 1px 0 0 1px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-win-surface);
+  border-left: 1px solid var(--color-win-shadow);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-win-surface);
+  border-top: 2px solid var(--color-win-highlight);
+  border-left: 2px solid var(--color-win-highlight);
+  border-right: 2px solid var(--color-win-shadow);
+  border-bottom: 2px solid var(--color-win-shadow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+/* Girly Animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: shimmer 1.5s ease-in-out infinite;
+}
