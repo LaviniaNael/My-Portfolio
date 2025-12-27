@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-win-bg: #120e14;
-  --color-win-surface: #1f1a24;
-  --color-win-header: #2d2633;
-  --color-win-text: #fdf2f8;
-  --color-win-highlight: #4a3b54;
-  --color-win-shadow: #0a080d;
-  --color-win-accent: #ec4899;
-  --color-win-taskbar: #1a151f;
-  --color-win-secondary: #a855f7;
+  --color-win-bg: #1a1525;
+  --color-win-surface: #2a2135;
+  --color-win-header: #3d3148;
+  --color-win-text: #f5e6ff;
+  --color-win-highlight: #5a4a6a;
+  --color-win-shadow: #0f0c14;
+  --color-win-accent: #e879f9;
+  --color-win-taskbar: #221b2e;
+  --color-win-secondary: #f472b6;
 }
 
 :root {
-  --font-retro: "MS Sans Serif", system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-retro: Tahoma, "MS Sans Serif", Verdana, "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 * {
@@ -25,8 +25,8 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: var(--font-retro);
-  background-color: #0c0c0c;
-  color: #e0e0e0;
+  background-color: #1a1525;
+  color: #f5e6ff;
   height: 100vh;
   width: 100vw;
   user-select: none;
@@ -75,7 +75,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3a;
+  background: #3d3148;
 }
 
 /* Girly Animations */
@@ -115,4 +115,36 @@ body {
 
 .animate-sparkle {
   animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Christmas Snowfall Animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.animate-snowfall {
+  animation: snowfall 10s linear infinite;
+}
+
+/* Christmas Glow Effect */
+@keyframes christmasGlow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+  }
+
+  50% {
+    text-shadow: 0 0 15px currentColor, 0 0 25px currentColor;
+  }
+}
+
+.christmas-glow {
+  animation: christmasGlow 2s ease-in-out infinite;
 }

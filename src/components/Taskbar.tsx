@@ -46,6 +46,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
         <div ref={taskbarRef} className="fixed bottom-0 left-0 right-0 h-10 bg-win-taskbar border-t-2 border-win-highlight flex items-center px-1 gap-1 z-[2000] select-none">
             {/* Start Button */}
             <button
+                data-start-button
                 onClick={(e) => {
                     e.stopPropagation();
                     onStartToggle();
