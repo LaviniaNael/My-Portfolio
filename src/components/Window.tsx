@@ -2,12 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { X, Minus, Square } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-
-function cn(...inputs: ClassValue[]) {
-    return twMerge(clsx(inputs));
-}
+import './Window.css';
 
 interface WindowProps {
     title: string;
@@ -53,59 +48,50 @@ const Window: React.FC<WindowProps> = ({
             }}
             animate={{ scale: 1, opacity: 1 }}
             style={{ zIndex, width, height }}
-            className={cn(
-                "absolute top-0 left-0 min-w-[320px] max-w-[95vw] max-h-[85vh] win-outset bg-win-surface flex flex-col pointer-events-auto shadow-2xl transition-shadow overflow-hidden",
-                isActive ? "ring-1 ring-win-accent/40 shadow-win-accent/10" : "shadow-black/50"
-            )}
+            className={`window-outer win-outset ${isActive ? 'window-active' : ''}`}
         >
             {/* Header */}
             <div
-                className={cn(
-                    "h-8 flex items-center justify-between px-1 cursor-move select-none",
-                    isActive ? "bg-win-accent" : "bg-win-header"
-                )}
+                className={`window-header ${isActive ? 'window-header-active' : 'window-header-inactive'}`}
             >
-                <div className="flex items-center gap-2 ml-1">
-                    <Icon size={14} className={isActive ? "text-white" : "text-win-text/60"} />
-                    <span className={cn(
-                        "text-[11px] font-bold antialiased truncate max-w-[200px] uppercase tracking-tighter",
-                        isActive ? "text-white" : "text-win-text/70"
-                    )}>
+                <div className="window-title-box">
+                    <Icon size={14} className={`window-title-icon ${isActive ? 'window-title-icon-active' : 'window-title-icon-inactive'}`} />
+                    <span className={`window-title-text ${isActive ? 'window-title-text-active' : 'window-title-text-inactive'}`}>
                         {title}
                     </span>
                 </div>
 
-                <div className="flex items-center gap-1 mr-1 pointer-events-auto" onPointerDown={(e) => e.stopPropagation()}>
+                <div className="window-controls" onPointerDown={(e) => e.stopPropagation()}>
                     <button
                         onClick={onMinimize}
-                        className="w-5 h-5 win-outset bg-win-surface flex items-center justify-center hover:bg-win-highlight/20 active:win-inset"
+                        className="window-btn window-btn-minimize win-outset"
                     >
                         <Minus size={12} className="text-win-text translate-y-1" />
                     </button>
-                    <button className="w-5 h-5 win-outset bg-win-surface flex items-center justify-center cursor-not-allowed opacity-50">
+                    <button className="window-btn win-outset cursor-not-allowed opacity-50" disabled>
                         <Square size={10} className="text-win-text" />
                     </button>
                     <button
                         onClick={onClose}
-                        className="ml-1 w-5 h-5 win-outset bg-win-surface flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors active:win-inset"
+                        className="window-btn window-btn-close win-outset ml-1"
                     >
-                        <X size={12} className="text-win-text group-hover:text-white" />
+                        <X size={12} className="group-hover:text-white" />
                     </button>
                 </div>
             </div>
 
             {/* Content Area */}
             <div
-                className="flex-1 overflow-auto win-inset m-1 bg-win-bg p-4 text-sm scrollbar-thin cursor-default"
+                className="window-content-area win-inset scrollbar-thin"
                 onPointerDown={(e) => e.stopPropagation()}
             >
                 {children}
             </div>
 
             {/* Footer / Status Bar */}
-            <div className="h-6 mx-1 mb-1 px-1 flex items-center gap-2 text-[9px] font-bold text-win-text/40 bg-win-surface">
-                <div className="win-inset flex-1 px-2 py-0.5 uppercase tracking-widest truncate">READY_SYSTEM_ACK</div>
-                <div className="win-inset w-16 px-2 py-0.5 text-center">LOC: {isActive ? "ACT" : "SLP"}</div>
+            <div className="window-footer">
+                <div className="status-bar-item status-bar-main win-inset">READY_SYSTEM_ACK</div>
+                <div className="status-bar-item status-bar-loc win-inset">LOC: {isActive ? "ACT" : "SLP"}</div>
             </div>
         </motion.div>
     );

@@ -1,0 +1,64 @@
+.about-container {
+    @apply flex flex-col gap-4;
+}
+
+.about-header {
+    @apply flex items-center gap-4 p-4 bg-win-surface/30 border border-win-highlight/10 rounded;
+}
+
+.profile-icon-wrapper {
+    @apply p-3 bg-win-accent/20 rounded-full relative;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+}
+
+.profile-sparkle {
+    @apply absolute -top-1 -right-1 text-win-secondary;
+}
+
+.profile-name {
+    @apply text-xl font-bold text-win-accent flex items-center gap-2;
+}
+
+.profile-title {
+    @apply text-sm text-win-text/80 font-mono tracking-tighter;
+}
+
+.about-card {
+    @apply p-4 bg-black/40 font-mono text-[13px] leading-relaxed relative overflow-hidden;
+}
+
+.about-card-sparkle {
+    @apply absolute top-0 right-0 p-1 opacity-10 group-hover:opacity-100 transition-opacity;
+}
+
+.card-filename {
+    @apply mb-3 text-win-accent font-bold tracking-widest uppercase text-[10px] flex items-center gap-2;
+}
+
+.status-dot {
+    @apply w-2 h-2 bg-win-accent;
+}
+
+.about-text {
+    @apply text-win-text/90 relative z-10;
+}
+
+.highlight-text {
+    @apply text-win-accent font-bold;
+}
+
+.about-footer-text {
+    @apply mt-4 text-win-text/80 italic text-xs leading-relaxed border-t border-win-highlight/10 pt-3;
+}
+
+.quick-skills-grid {
+    @apply grid grid-cols-2 gap-2;
+}
+
+.skill-tag {
+    @apply p-2 text-center text-[10px] font-bold transition-all cursor-default;
+}
+
+.skill-tag:hover {
+    @apply bg-win-accent text-white;
+}

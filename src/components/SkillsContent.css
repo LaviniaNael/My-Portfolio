@@ -1,0 +1,51 @@
+.skills-container {
+    @apply flex flex-col gap-4;
+}
+
+.system-scan-box {
+    @apply p-3 bg-black/20 font-mono text-[11px] leading-tight text-green-500/80;
+}
+
+.skills-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-3;
+}
+
+.skill-group-card {
+    @apply p-3 bg-win-surface/60 flex flex-col gap-2;
+}
+
+.skill-group-header {
+    @apply flex items-center gap-2 border-b border-win-highlight/20 pb-1 mb-2;
+}
+
+.skill-group-icon {
+    @apply text-win-accent;
+}
+
+.skill-group-title {
+    @apply text-xs font-bold uppercase tracking-tighter text-win-accent;
+}
+
+.skills-list {
+    @apply flex flex-wrap gap-1;
+}
+
+.skill-badge {
+    @apply px-2 py-0.5 bg-black/40 text-[10px] font-mono border border-win-highlight/10 text-win-text/90;
+}
+
+.skills-footer {
+    @apply mt-4 flex items-center justify-between p-2 bg-win-accent/5;
+}
+
+.skills-footer-info {
+    @apply flex items-center gap-2;
+}
+
+.skills-footer-text {
+    @apply text-[10px] font-bold;
+}
+
+.skills-footer-icon {
+    @apply text-win-text/30;
+}

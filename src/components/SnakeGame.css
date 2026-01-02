@@ -1,0 +1,111 @@
+.snake-game-wrapper {
+    @apply flex flex-col items-center gap-3 p-2 outline-none;
+}
+
+.score-board {
+    @apply flex justify-between w-full px-2 text-xs font-bold;
+}
+
+.current-score {
+    @apply text-win-accent;
+}
+
+.best-score {
+    @apply text-win-secondary;
+}
+
+.game-board-container {
+    @apply relative bg-black;
+}
+
+.game-grid {
+    @apply relative bg-gray-900;
+}
+
+.snake-food {
+    @apply absolute rounded-full bg-red-500;
+}
+
+.snake-segment {
+    @apply absolute rounded-sm;
+}
+
+.snake-head {
+    @apply bg-green-400;
+}
+
+.snake-body {
+    @apply bg-green-500;
+}
+
+.game-overlay {
+    @apply absolute inset-0 bg-black/80 flex flex-col items-center justify-center gap-2 p-2;
+}
+
+.game-over-text {
+    @apply text-red-500 font-bold text-lg;
+}
+
+.game-score-text {
+    @apply text-win-text text-xs;
+}
+
+.new-high-score {
+    @apply text-yellow-400 text-[10px];
+}
+
+.play-again-btn {
+    @apply px-3 py-1 text-xs font-bold uppercase bg-win-surface hover:bg-win-accent hover:text-white transition-all mt-2;
+}
+
+.game-title {
+    @apply text-win-text font-bold text-sm mb-2;
+}
+
+.difficulty-label {
+    @apply text-win-text/40 text-[10px] mb-2;
+}
+
+.difficulty-options {
+    @apply flex flex-col gap-1 w-full max-w-[200px];
+}
+
+.difficulty-btn {
+    @apply w-full px-3 py-2 text-xs font-bold uppercase bg-win-surface flex justify-between items-center hover:bg-win-accent hover:text-white transition-all;
+}
+
+.difficulty-desc {
+    @apply text-[9px] opacity-60;
+}
+
+.high-scores-summary {
+    @apply mt-3 text-[9px] text-win-text/50 text-center;
+}
+
+.high-scores-list {
+    @apply flex gap-3 mt-1;
+}
+
+.controls-hint {
+    @apply text-[10px] text-win-text/40 text-center;
+}
+
+.mobile-controls {
+    @apply grid grid-cols-3 gap-1 mt-1;
+}
+
+.mobile-dir-btn {
+    @apply w-8 h-8 bg-win-surface flex items-center justify-center text-xs font-bold transition-all hover:bg-win-highlight/80 active:bg-win-highlight;
+}
+
+.text-easy {
+    @apply text-green-400;
+}
+
+.text-medium {
+    @apply text-yellow-400;
+}
+
+.text-hard {
+    @apply text-red-400;
+}

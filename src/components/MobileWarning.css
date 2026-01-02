@@ -1,0 +1,80 @@
+.mobile-warning-overlay {
+    @apply fixed inset-0 z-[5000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm;
+}
+
+.warning-modal {
+    @apply w-full max-w-sm bg-win-surface;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.warning-title-bar {
+    @apply bg-gradient-to-r from-win-accent to-win-secondary px-3 py-1.5 flex items-center justify-between text-white font-bold text-sm;
+}
+
+.title-box {
+    @apply flex items-center gap-2;
+}
+
+.warning-close-btn {
+    @apply bg-win-surface p-0.5 flex items-center justify-center transition-colors;
+}
+
+.warning-close-btn:hover {
+    @apply bg-red-500 text-white;
+}
+
+.warning-close-icon {
+    @apply text-win-text transition-colors;
+}
+
+.warning-close-btn:hover .warning-close-icon {
+    @apply text-white;
+}
+
+.warning-content {
+    @apply p-6 flex flex-col gap-4;
+}
+
+.warning-intro-row {
+    @apply flex items-start gap-4;
+}
+
+.warning-icon-box {
+    @apply p-3 bg-win-bg shrink-0;
+}
+
+.warning-text-box {
+    @apply flex flex-col gap-2;
+}
+
+.warning-h2 {
+    @apply text-lg font-bold text-win-accent flex items-center gap-2;
+}
+
+.warning-p {
+    @apply text-xs leading-relaxed text-win-text font-medium;
+}
+
+.warning-tip-box {
+    @apply bg-win-bg/50 p-4 flex flex-col gap-3;
+}
+
+.warning-italic {
+    @apply text-[11px] leading-relaxed italic;
+}
+
+.warning-pro-tip {
+    @apply flex items-center gap-2 text-[11px] font-bold text-win-secondary;
+}
+
+.tip-dot {
+    @apply w-2 h-2 rounded-full bg-win-secondary;
+}
+
+.warning-footer {
+    @apply flex justify-end pt-2;
+}
+
+.warning-action-btn {
+    @apply px-6 py-2 bg-win-surface font-bold text-xs uppercase tracking-wider transition-all hover:bg-win-accent hover:text-white;
+}

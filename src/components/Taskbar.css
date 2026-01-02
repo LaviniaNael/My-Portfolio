@@ -1,0 +1,74 @@
+.taskbar-wrapper {
+    @apply fixed bottom-0 left-0 right-0 h-10 bg-win-taskbar border-t-2 border-win-highlight flex items-center px-1 gap-1 z-[2000] select-none;
+}
+
+.start-button {
+    @apply h-8 px-2 flex items-center gap-1.5 bg-win-surface hover:bg-win-highlight/20 transition-colors;
+}
+
+.start-button-label {
+    @apply font-bold text-sm text-win-text italic tracking-tighter;
+}
+
+.taskbar-divider {
+    @apply w-[2px] h-6 bg-win-shadow mx-1;
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.window-tabs-container {
+    @apply flex-1 flex gap-1 overflow-x-auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.window-tabs-container::-webkit-scrollbar {
+    display: none;
+}
+
+.window-tab {
+    @apply h-8 min-w-[120px] max-w-[160px] px-2 flex items-center gap-2 transition-all bg-win-surface;
+}
+
+.window-tab-active {
+    @apply bg-black/20;
+}
+
+.window-tab-icon {
+    @apply transition-colors text-win-text/60;
+}
+
+.window-tab-active .window-tab-icon {
+    @apply text-win-accent;
+}
+
+.window-tab:hover:not(.window-tab-active) .window-tab-icon {
+    @apply text-win-text/80;
+}
+
+.window-tab-title {
+    @apply text-[10px] uppercase tracking-tighter truncate text-win-text/40;
+}
+
+.window-tab-active .window-tab-title {
+    @apply font-bold text-win-text;
+}
+
+.tray-area {
+    @apply px-2 h-8 flex items-center gap-3 bg-black/20 ml-2;
+}
+
+.tray-icons {
+    @apply flex gap-2;
+}
+
+.tray-icon {
+    @apply text-win-text/30;
+}
+
+.tray-divider {
+    @apply w-px h-4 bg-win-highlight/10;
+}
+
+.tray-time {
+    @apply text-[10px] font-bold text-win-text/80 font-mono;
+}

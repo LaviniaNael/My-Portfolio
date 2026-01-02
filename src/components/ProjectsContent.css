@@ -1,0 +1,51 @@
+.projects-container {
+    @apply flex flex-col gap-4;
+}
+
+.projects-path-bar {
+    @apply flex items-center gap-2 mb-4 p-2 bg-win-accent/10 border-b border-win-accent/30;
+}
+
+.projects-path-text {
+    @apply text-xs font-mono font-bold;
+}
+
+.projects-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.project-card {
+    @apply p-4 bg-win-surface/40 hover:bg-win-surface/60 transition-all hover:scale-[1.02];
+}
+
+.project-card-header {
+    @apply flex justify-between items-start mb-2;
+}
+
+.project-icon {
+    @apply text-win-accent/50 group-hover:text-win-accent transition-colors;
+}
+
+.project-links {
+    @apply flex gap-2;
+}
+
+.project-link-icon {
+    @apply text-win-text/60 hover:text-win-accent transition-colors;
+}
+
+.project-title {
+    @apply font-bold text-win-text text-base mb-1;
+}
+
+.project-desc {
+    @apply text-[10px] text-win-text/60 mb-3 line-clamp-2 h-8 leading-tight;
+}
+
+.project-tech-list {
+    @apply flex flex-wrap gap-1;
+}
+
+.tech-badge {
+    @apply px-1.5 py-0.5 bg-black/40 text-[9px] font-mono border border-win-highlight/10 text-win-accent/80;
+}

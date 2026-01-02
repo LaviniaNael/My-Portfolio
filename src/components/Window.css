@@ -1,0 +1,88 @@
+.window-outer {
+    @apply absolute top-0 left-0 min-w-[320px] max-w-[95vw] max-h-[85vh] bg-win-surface flex flex-col pointer-events-auto shadow-2xl transition-shadow overflow-hidden;
+}
+
+.window-active {
+    @apply ring-1 ring-win-accent/40;
+    box-shadow: 0 0 15px rgba(255, 77, 141, 0.1);
+}
+
+.window-header {
+    @apply h-8 flex items-center justify-between px-1 cursor-move select-none;
+}
+
+.window-header-active {
+    @apply bg-win-accent;
+}
+
+.window-header-inactive {
+    @apply bg-win-header;
+}
+
+.window-title-box {
+    @apply flex items-center gap-2 ml-1;
+}
+
+.window-title-icon {
+    @apply transition-colors;
+}
+
+.window-title-icon-active {
+    @apply text-white;
+}
+
+.window-title-icon-inactive {
+    @apply text-win-text/60;
+}
+
+.window-title-text {
+    @apply text-[11px] font-bold antialiased truncate max-w-[200px] uppercase tracking-tighter;
+}
+
+.window-title-text-active {
+    @apply text-white;
+}
+
+.window-title-text-inactive {
+    @apply text-win-text/70;
+}
+
+.window-controls {
+    @apply flex items-center gap-1 mr-1 pointer-events-auto;
+}
+
+.window-btn {
+    @apply w-5 h-5 bg-win-surface flex items-center justify-center transition-all;
+}
+
+.window-btn-minimize:hover {
+    @apply bg-win-highlight/20;
+}
+
+.window-btn-close:hover {
+    @apply bg-red-600 text-white;
+}
+
+.window-btn:disabled {
+    @apply cursor-not-allowed opacity-50;
+}
+
+.window-content-area {
+    @apply flex-1 overflow-auto m-1 bg-win-bg p-4 text-sm cursor-default;
+}
+
+.window-footer {
+    @apply h-6 mx-1 mb-1 px-1 flex items-center gap-2 text-[9px] font-bold text-win-text/40 bg-win-surface;
+}
+
+.status-bar-item {
+    @apply px-2 py-0.5 uppercase tracking-widest truncate;
+}
+
+.status-bar-main {
+    @apply flex-1;
+}
+
+.status-bar-loc {
+    @apply w-16 text-center;
+}

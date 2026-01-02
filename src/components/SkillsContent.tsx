@@ -1,14 +1,15 @@
 import { Shield, Cpu, Code, Database, Globe, Layers } from 'lucide-react';
+import './SkillsContent.css';
 
 const SkillGroup = ({ title, skills, icon: Icon }: { title: string, skills: string[], icon: any }) => (
-    <div className="win-outset p-3 bg-win-surface/40 space-y-2">
-        <div className="flex items-center gap-2 border-b border-win-highlight/20 pb-1 mb-2">
-            <Icon size={16} className="text-win-accent" />
-            <span className="text-xs font-bold uppercase tracking-tight text-win-accent">{title}</span>
+    <div className="skill-group-card win-outset">
+        <div className="skill-group-header">
+            <Icon size={16} className="skill-group-icon" />
+            <span className="skill-group-title">{title}</span>
         </div>
-        <div className="flex flex-wrap gap-1">
+        <div className="skills-list">
             {skills.map(skill => (
-                <span key={skill} className="px-2 py-0.5 bg-black/40 text-[10px] font-mono border border-win-highlight/10 text-win-text/90">
+                <span key={skill} className="skill-badge">
                     {skill}
                 </span>
             ))}
@@ -18,8 +19,8 @@ const SkillGroup = ({ title, skills, icon: Icon }: { title: string, skills: stri
 
 const SkillsContent = () => {
     return (
-        <div className="space-y-4">
-            <div className="win-inset p-3 bg-black/20 font-mono text-[11px] leading-tight text-green-500/80">
+        <div className="skills-container">
+            <div className="system-scan-box win-inset">
                 [SYSTEM ARCHITECTURE DETECTED]
                 <br />
                 {'>'} Scanning technical_capabilities...
@@ -27,7 +28,7 @@ const SkillsContent = () => {
                 {'>'} 100% Match Found.
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="skills-grid">
                 <SkillGroup
                     title="Languages"
                     icon={Code}
@@ -50,12 +51,12 @@ const SkillsContent = () => {
                 />
             </div>
 
-            <div className="mt-4 flex items-center justify-between p-2 win-inset bg-win-accent/5">
-                <div className="flex items-center gap-2">
+            <div className="skills-footer win-inset">
+                <div className="skills-footer-info">
                     <Shield size={14} className="text-win-accent" />
-                    <span className="text-[10px] font-bold">SEO & Performance Optimized</span>
+                    <span className="skills-footer-text">SEO & Performance Optimized</span>
                 </div>
-                <Globe size={14} className="text-win-text/30" />
+                <Globe size={14} className="skills-footer-icon" />
             </div>
         </div>
     );

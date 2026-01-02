@@ -1,0 +1,63 @@
+.education-container {
+    @apply flex flex-col gap-6;
+}
+
+.education-header {
+    @apply flex items-start gap-4;
+}
+
+.degree-icon-box {
+    @apply p-3 bg-win-accent/20;
+}
+
+.degree-info {
+    @apply flex flex-col gap-1;
+}
+
+.degree-title {
+    @apply text-xl font-bold text-win-text;
+}
+
+.degree-major {
+    @apply text-win-accent font-bold;
+}
+
+.degree-meta {
+    @apply flex items-center gap-2 text-xs text-win-text/40;
+}
+
+.degree-faculty {
+    @apply text-xs text-win-text/40 italic;
+}
+
+.coursework-section {
+    @apply flex flex-col gap-3;
+}
+
+.section-label {
+    @apply text-[10px] font-bold uppercase tracking-widest text-win-text/40 border-b border-win-highlight/10 pb-1;
+}
+
+.coursework-list {
+    @apply grid grid-cols-1 gap-2;
+}
+
+.course-item {
+    @apply flex items-center gap-3 p-3 bg-black/20 hover:bg-black/30 transition-colors;
+}
+
+.course-icon {
+    @apply text-win-accent/30;
+}
+
+.course-title {
+    @apply text-sm font-bold text-win-text/90;
+}
+
+.course-desc {
+    @apply text-[10px] text-win-text/50;
+}
+
+.education-quote {
+    @apply p-3 bg-win-accent/5 italic text-[11px] text-win-text/70 border-l-4 border-win-accent;
+}

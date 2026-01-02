@@ -1,0 +1,185 @@
+.readme-container {
+    @apply h-full overflow-y-auto bg-win-bg p-6 text-win-text selection:bg-win-accent selection:text-white;
+}
+
+.readme-hero {
+    @apply relative mb-12 p-8 bg-gradient-to-br from-win-surface to-win-bg overflow-hidden;
+}
+
+.readme-hero-icon {
+    @apply absolute top-0 right-0 p-4 opacity-10 transition-opacity;
+}
+
+.readme-hero:hover .readme-hero-icon {
+    @apply opacity-20;
+}
+
+.readme-hero-content {
+    @apply relative z-10 flex flex-col items-center text-center gap-4;
+}
+
+.hero-title-wrapper {
+    @apply flex items-center gap-3;
+}
+
+.hero-title {
+    @apply text-3xl w-full font-bold tracking-tighter uppercase italic text-transparent bg-clip-text bg-gradient-to-r from-win-accent via-win-secondary to-win-accent animate-shimmer;
+    /* background-size: 200% auto; */
+}
+
+.hero-subtitle {
+    @apply italic opacity-80 max-w-xl leading-relaxed;
+}
+
+.hero-divider {
+    @apply h-1 w-24 bg-win-accent rounded-full mt-2;
+}
+
+.intro-grid {
+    @apply grid grid-cols-1 gap-6 mb-12;
+}
+
+.readme-card {
+    @apply bg-win-surface p-6 flex flex-col gap-4 transition-transform hover:-translate-y-0.5;
+}
+
+.card-header {
+    @apply flex items-center gap-3 border-b border-win-highlight/30 pb-3;
+}
+
+.card-icon-box {
+    @apply p-2 rounded-lg;
+}
+
+.card-title {
+    @apply text-lg font-bold italic uppercase tracking-wider;
+}
+
+.card-content {
+    @apply flex flex-col gap-3 text-sm leading-relaxed;
+}
+
+.accent-text {
+    @apply text-win-accent text-base;
+}
+
+.secondary-bold {
+    @apply underline underline-offset-4 font-bold decoration-win-secondary;
+}
+
+.dim-text {
+    @apply italic text-xs opacity-70;
+}
+
+.info-list {
+    @apply bg-win-bg/50 p-3 text-[11px] flex flex-col gap-2;
+}
+
+.list-item {
+    @apply flex items-center gap-2;
+}
+
+.item-dot {
+    @apply w-1.5 h-1.5 rounded-full;
+}
+
+.section-divider-row {
+    @apply mb-12 flex flex-col gap-6;
+}
+
+.divider-header {
+    @apply flex items-center gap-4;
+}
+
+.divider-line {
+    @apply h-[2px] flex-1;
+}
+
+.divider-to-right {
+    @apply bg-gradient-to-r from-transparent to-win-highlight/30;
+}
+
+.divider-to-left {
+    @apply bg-gradient-to-l from-transparent to-win-highlight/30;
+}
+
+.divider-title {
+    @apply text-2xl font-bold italic uppercase tracking-[0.3em] opacity-50;
+}
+
+.why-retro-list {
+    @apply grid grid-cols-1 gap-4;
+}
+
+.why-retro-item {
+    @apply flex gap-4 p-4 bg-win-surface/70 transition-colors hover:bg-win-surface/50;
+}
+
+.why-retro-icon {
+    @apply transition-transform;
+}
+
+.why-retro-item:hover .why-retro-icon {
+    @apply scale-110;
+}
+
+.why-retro-details {
+    @apply flex flex-col gap-1;
+}
+
+.why-retro-title {
+    @apply font-bold text-sm tracking-tight;
+}
+
+.why-retro-desc {
+    @apply text-xs opacity-70 leading-relaxed;
+}
+
+.built-with-card {
+    @apply bg-win-surface p-8 text-center flex flex-col gap-6 mb-8 relative overflow-hidden;
+}
+
+.built-with-glow {
+    @apply absolute inset-0 pointer-events-none;
+    background: radial-gradient(circle at center, rgba(255, 77, 141, 0.05) 0%, transparent 100%);
+}
+
+.built-with-content {
+    @apply relative z-10;
+}
+
+.built-with-title {
+    @apply text-xl font-bold italic uppercase tracking-widest mb-6 flex items-center justify-center gap-3;
+}
+
+.tech-tags-wrapper {
+    @apply flex flex-wrap justify-center gap-3;
+}
+
+.tech-tag {
+    @apply px-4 py-1.5 bg-win-bg text-xs font-bold tracking-wider transition-colors hover:text-win-accent;
+}
+
+.readme-footer {
+    @apply text-center py-8 opacity-40 italic flex flex-col gap-2;
+}
+
+.footer-love {
+    @apply text-sm;
+}
+
+.footer-name {
+    @apply text-[10px] uppercase tracking-[0.4em];
+}
+
+.text-blue-icon {
+    @apply text-blue-400;
+}
+
+.text-accent-icon {
+    @apply text-win-accent;
+}
+
+.text-secondary-icon {
+    @apply text-win-secondary;
+}

@@ -1,0 +1,107 @@
+.contact-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 p-2;
+}
+
+.contact-info-section {
+    @apply flex flex-col gap-6;
+}
+
+.protocol-card {
+    @apply p-4 bg-black/30 border border-win-accent/20;
+}
+
+.protocol-header {
+    @apply text-sm font-bold text-win-accent mb-4 uppercase tracking-widest;
+}
+
+.protocol-items {
+    @apply flex flex-col gap-4;
+}
+
+.protocol-item {
+    @apply flex items-center gap-3 px-2 py-1 transition-colors hover:bg-win-accent/10;
+}
+
+.protocol-icon-box {
+    @apply p-2 bg-win-surface;
+}
+
+.protocol-icon {
+    @apply text-win-accent;
+}
+
+.protocol-content {
+    @apply overflow-hidden;
+}
+
+.protocol-label {
+    @apply text-[9px] font-bold text-win-text/60 uppercase;
+}
+
+.protocol-value {
+    @apply text-xs text-win-text block truncate hover:text-win-accent;
+}
+
+.social-links {
+    @apply flex gap-2;
+}
+
+.social-button {
+    @apply flex-1 h-10 bg-win-surface flex items-center justify-center gap-2 text-xs font-bold transition-all no-underline text-inherit hover:bg-win-accent hover:text-white;
+}
+
+.form-section {
+    @apply p-4 bg-win-surface/60 flex flex-col gap-4;
+}
+
+.form-header {
+    @apply text-xs font-bold text-win-text/40 italic flex items-center gap-2;
+}
+
+.success-message {
+    @apply bg-black/20 p-4 border-l-4 border-win-accent;
+}
+
+.success-title {
+    @apply text-sm text-win-accent font-bold uppercase tracking-widest mb-2;
+}
+
+.success-body {
+    @apply text-xs text-win-text/80 leading-relaxed font-mono;
+}
+
+.reset-button {
+    @apply mt-4 text-[10px] font-bold text-win-accent uppercase hover:underline;
+}
+
+.contact-form {
+    @apply flex flex-col gap-3;
+}
+
+.form-field {
+    @apply flex flex-col gap-1;
+}
+
+.form-input {
+    @apply w-full h-8 bg-black/40 px-2 text-xs outline-none border-none text-win-text focus:ring-1 focus:ring-win-accent;
+}
+
+.form-textarea {
+    @apply w-full h-24 bg-black/40 p-2 text-xs outline-none border-none text-win-text resize-none focus:ring-1 focus:ring-win-accent;
+}
+
+.validation-error {
+    @apply text-[10px] text-red-400 font-mono;
+}
+
+.submit-button {
+    @apply w-full h-10 bg-win-surface flex items-center justify-center gap-3 font-bold transition-all disabled:opacity-50 disabled:cursor-wait hover:enabled:bg-win-accent hover:enabled:text-white;
+}
+
+.submit-icon {
+    @apply transition-transform group-hover:translate-x-1;
+}
+
+.error-tunnel-msg {
+    @apply text-[10px] text-red-400 font-mono text-center uppercase;
+}

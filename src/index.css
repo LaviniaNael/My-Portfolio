@@ -1,20 +1,6 @@
-@import "tailwindcss";
-
-@theme {
-  --color-win-bg: #1a1525;
-  --color-win-surface: #2a2135;
-  --color-win-header: #3d3148;
-  --color-win-text: #f5e6ff;
-  --color-win-highlight: #5a4a6a;
-  --color-win-shadow: #0f0c14;
-  --color-win-accent: #e879f9;
-  --color-win-taskbar: #221b2e;
-  --color-win-secondary: #f472b6;
-}
-
-:root {
-  --font-retro: Tahoma, "MS Sans Serif", Verdana, "Segoe UI", system-ui, -apple-system, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;

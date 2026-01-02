@@ -1,42 +1,196 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app-container {
+  @apply relative h-screen w-screen bg-win-bg overflow-hidden font-retro selection:bg-win-accent selection:text-white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Ambient Background Decorations */
+.ambient-bg {
+  @apply absolute inset-0 bg-win-bg pointer-events-none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.decorations-container {
+  @apply absolute inset-0 pointer-events-none overflow-hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.decoration-heart {
+  @apply absolute top-20 left-20 opacity-10 hidden md:block;
+  color: var(--color-win-accent);
 }
 
-.card {
-  padding: 2em;
+.decoration-heart1 {
+  @apply absolute bottom-20 right-20 opacity-10 sm:bottom-10 sm:right-10;
+  color: var(--color-win-accent);
 }
 
-.read-the-docs {
-  color: #888;
+.decoration-sparkles {
+  @apply absolute top-20 right-20 opacity-15 sm:opacity-0;
+  color: var(--color-win-secondary);
+}
+
+.decoration-star-1 {
+  @apply absolute top-1/4 right-1/3 opacity-[0.07] hidden sm:block;
+  color: var(--color-win-accent);
+}
+
+.decoration-star-2 {
+  @apply absolute bottom-1/3 left-1/4 opacity-[0.07] sm:bottom-20 sm:left-10;
+  color: var(--color-win-secondary);
+}
+
+.ambient-glow {
+  @apply absolute inset-0;
+  background: radial-gradient(circle at center, rgba(232, 121, 249, 0.18) 0%, transparent 100%);
+}
+
+/* Christmas Decorations */
+.christmas-glow {
+  @apply absolute inset-0;
+  background: radial-gradient(circle at top, rgba(239, 68, 68, 0.15) 0%, transparent 50%), radial-gradient(circle at bottom, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
+}
+
+.snowflake {
+  @apply absolute text-white/80;
+}
+
+/* Scanline/Grid Overlay */
+.retro-overlay {
+  @apply absolute inset-0 pointer-events-none z-[3000];
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.08) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+  background-size: 100% 3px, 4px 100%;
+}
+
+/* Desktop Workspace */
+.desktop-workspace {
+  @apply relative h-full w-full p-4 overflow-hidden pb-12;
+}
+
+.desktop-hint {
+  @apply hidden sm:flex absolute inset-0 items-center justify-center pointer-events-none select-none p-12 text-center transition-opacity duration-1000;
+}
+
+.hint-content {
+  @apply max-w-xl opacity-10 flex flex-col items-center gap-6;
+}
+
+.hint-monitor {
+  margin-bottom: 1rem;
+  color: var(--color-win-accent);
+}
+
+.hint-title {
+  @apply text-2xl md:text-4xl font-bold uppercase tracking-widest italic;
+  color: var(--color-win-text);
+}
+
+.hint-p {
+  @apply text-xl font-medium leading-relaxed lowercase italic max-w-2xl px-4;
+  color: var(--color-win-text);
+}
+
+.hint-icons {
+  @apply flex gap-8 mt-8 animate-pulse;
+  color: var(--color-win-secondary);
+}
+
+.icons-grid {
+  @apply grid grid-flow-col auto-cols-max gap-2 h-full w-full relative z-10 pointer-events-none;
+  grid-template-rows: repeat(auto-fill, 110px);
+}
+
+.icons-grid>div {
+  @apply pointer-events-auto contents;
+}
+
+/* Start Menu */
+.start-menu-outer {
+  @apply fixed bottom-10 left-1 w-96 max-h-[85vh] z-[2100] overflow-y-auto;
+  background-color: var(--color-win-surface);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.start-menu-header {
+  @apply h-14 flex items-center px-4 font-bold italic text-white shadow-inner gap-3 sticky top-0 z-10;
+  background: linear-gradient(to right, var(--color-win-accent), var(--color-win-secondary));
+}
+
+.header-icon-box {
+  @apply p-1.5 bg-white/30 rounded-sm backdrop-blur-sm;
+}
+
+.header-text-main {
+  @apply tracking-tight uppercase text-sm;
+}
+
+.header-text-sub {
+  @apply text-[9px] opacity-90 font-normal;
+}
+
+.start-menu-content {
+  @apply p-3 flex flex-col gap-3;
+}
+
+.start-section {
+  @apply p-3 flex flex-col gap-2;
+  background-color: var(--color-win-bg);
+}
+
+.section-header {
+  @apply flex items-center gap-2 pb-2;
+  border-bottom: 1px solid var(--color-win-shadow);
+}
+
+.section-title {
+  @apply font-bold text-[10px] uppercase;
+}
+
+.status-text {
+  @apply text-[11px] leading-relaxed;
+}
+
+.status-name {
+  @apply text-base mb-1;
+}
+
+.status-desc {
+  color: var(--color-win-text);
+  opacity: 0.8;
+}
+
+.tech-badges-wrapper {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.tech-badge {
+  @apply text-[10px] text-white px-2 py-1 font-bold;
+  background-color: var(--color-win-surface);
+}
+
+.action-btn {
+  @apply w-full flex items-center gap-3 px-2 py-2 text-[11px] font-bold uppercase tracking-tight transition-colors;
+  background-color: var(--color-win-surface);
+}
+
+.action-btn:hover {
+  background-color: var(--color-win-accent);
+  color: white;
+}
+
+.action-btn:hover svg {
+  @apply text-white !important;
+}
+
+.action-btn-github:hover {
+  background-color: #1f2937;
+}
+
+.action-btn-linkedin:hover {
+  background-color: #2563eb;
+}
+
+.theme-btn-content {
+  @apply flex items-center gap-3;
+}
+
+.theme-toggle-text {
+  @apply text-[9px];
+  opacity: 0.7;
 }

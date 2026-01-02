@@ -1,0 +1,79 @@
+.experience-container {
+    @apply flex flex-col gap-6;
+}
+
+.experience-header {
+    @apply flex items-center justify-between border-b border-win-highlight/20 pb-4;
+}
+
+.job-title-wrapper {
+    @apply flex items-center gap-3;
+}
+
+.job-icon-box {
+    @apply p-2 bg-win-accent;
+}
+
+.job-details {
+    @apply flex flex-col;
+}
+
+.job-role {
+    @apply text-lg font-bold text-win-text;
+}
+
+.job-company {
+    @apply text-sm text-win-accent font-bold;
+}
+
+.job-timeline {
+    @apply text-right;
+}
+
+.timeline-text {
+    @apply text-xs font-mono text-win-text/50;
+}
+
+.experience-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.exp-column {
+    @apply flex flex-col gap-4;
+}
+
+.exp-section-title {
+    @apply text-[10px] font-bold uppercase tracking-[0.2em] text-win-text/40;
+}
+
+.task-list {
+    @apply flex flex-col gap-3 list-none p-0 m-0;
+}
+
+.task-item {
+    @apply flex gap-3 text-xs text-win-text/80;
+}
+
+.task-icon {
+    @apply text-win-accent/50 mt-0.5 transition-colors group-hover:text-win-accent;
+}
+
+.workflow-list {
+    @apply grid grid-cols-1 gap-2;
+}
+
+.workflow-item {
+    @apply p-2 bg-black/10 flex items-center gap-3;
+}
+
+.workflow-icon {
+    @apply text-win-accent/40;
+}
+
+.workflow-label {
+    @apply text-[11px] font-bold;
+}
+
+.workflow-desc {
+    @apply text-[9px] text-win-text/40;
+}

@@ -1,0 +1,42 @@
+.desktop-icon-wrapper {
+    @apply flex flex-col items-center gap-1 p-2 w-24 cursor-pointer rounded border border-transparent transition-all active:scale-95;
+}
+
+.desktop-icon-wrapper:hover {
+    @apply bg-win-accent/20 border-win-accent/30;
+}
+
+.icon-visual-box {
+    @apply relative p-2 bg-win-surface/40 rounded-xl transition-all;
+    box-shadow: 0 0 0 rgba(255, 77, 141, 0);
+}
+
+.desktop-icon-wrapper:hover .icon-visual-box {
+    @apply bg-win-surface/60;
+    box-shadow: 0 0 15px rgba(255, 77, 141, 0.3);
+}
+
+.icon-svg {
+    @apply text-win-accent transition-transform;
+}
+
+.desktop-icon-wrapper:hover .icon-svg {
+    @apply scale-110;
+}
+
+.icon-sparkle {
+    @apply absolute -top-1 -right-1 text-win-secondary opacity-0 transition-opacity;
+}
+
+.desktop-icon-wrapper:hover .icon-sparkle {
+    @apply opacity-100;
+}
+
+.icon-label {
+    @apply text-[11px] text-center text-win-text font-medium leading-tight transition-colors;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+}
+
+.desktop-icon-wrapper:hover .icon-label {
+    @apply text-win-accent;
+}
