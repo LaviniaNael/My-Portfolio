@@ -16,15 +16,15 @@
 }
 
 .profile-name {
-    @apply text-xl font-bold text-win-accent flex items-center gap-2;
+    @apply text-xl tracking-wider text-win-accent flex items-center gap-2;
 }
 
 .profile-title {
-    @apply text-sm text-win-text/80 font-mono tracking-tighter;
-}
+    @apply text-base text-win-text/80 tracking-wider;
+} 
 
 .about-card {
-    @apply p-4 bg-black/40 font-mono text-[13px] leading-relaxed relative overflow-hidden;
+    @apply p-4 bg-black/40 text-lg leading-relaxed relative overflow-hidden;
 }
 
 .about-card-sparkle {
@@ -32,7 +32,7 @@
 }
 
 .card-filename {
-    @apply mb-3 text-win-accent font-bold tracking-widest uppercase text-[10px] flex items-center gap-2;
+    @apply mb-2 text-win-accent tracking-widest uppercase text-sm flex items-center gap-2;
 }
 
 .status-dot {
@@ -44,11 +44,11 @@
 }
 
 .highlight-text {
-    @apply text-win-accent font-bold;
+    @apply text-pink-300;
 }
 
 .about-footer-text {
-    @apply mt-4 text-win-text/80 italic text-xs leading-relaxed border-t border-win-highlight/10 pt-3;
+    @apply mt-4 text-win-text/80 italic text-sm leading-relaxed border-t border-win-highlight/10 pt-3;
 }
 
 .quick-skills-grid {
@@ -56,7 +56,7 @@
 }
 
 .skill-tag {
-    @apply p-2 text-center text-[10px] font-bold transition-all cursor-default;
+    @apply p-2 text-center text-sm tracking-wider transition-all;
 }
 
 .skill-tag:hover {

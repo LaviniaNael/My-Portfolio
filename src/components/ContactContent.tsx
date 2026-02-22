@@ -45,10 +45,9 @@ const ContactContent = () => {
 
                 <div className="social-links">
                     <a href="https://linkedin.com/in/lavinia-alfons" target="_blank" className="social-button win-outset">
-                        <Linkedin size={16} /> LINKEDIN
-                    </a>
+                        <Linkedin size={16} /> LinkedIn</a>
                     <a href="https://github.com/LaviniaNael" target="_blank" className="social-button win-outset">
-                        <Github size={16} /> GITHUB
+                        <Github size={16} /> Github
                     </a>
                 </div>
             </div>
@@ -114,7 +113,7 @@ const ContactContent = () => {
                             className="submit-button win-outset"
                         >
                             <Send size={16} className="submit-icon" />
-                            {state.submitting ? 'TRANSMITTING...' : 'TRANSMIT'}
+                            {state.submitting ? 'Transmitting...' : 'Transmit'}
                         </button>
 
                         {state.errors && !state.succeeded && (

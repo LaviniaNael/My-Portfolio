@@ -3,7 +3,7 @@
 }
 
 .system-scan-box {
-    @apply p-3 bg-black/20 font-mono text-[11px] leading-tight text-green-500/80;
+    @apply p-3 bg-black/20 text-sm leading-tight tracking-wider text-green-500/80;
 }
 
 .skills-grid {
@@ -23,7 +23,7 @@
 }
 
 .skill-group-title {
-    @apply text-xs font-bold uppercase tracking-tighter text-win-accent;
+    @apply text-sm uppercase tracking-wider text-win-accent;
 }
 
 .skills-list {
@@ -31,7 +31,7 @@
 }
 
 .skill-badge {
-    @apply px-2 py-0.5 bg-black/40 text-[10px] font-mono border border-win-highlight/10 text-win-text/90;
+    @apply px-2 py-0.5 bg-black/40 text-sm border border-win-highlight/10 text-win-text/90;
 }
 
 .skills-footer {
@@ -43,7 +43,7 @@
 }
 
 .skills-footer-text {
-    @apply text-[10px] font-bold;
+    @apply text-sm tracking-wider;
 }
 
 .skills-footer-icon {

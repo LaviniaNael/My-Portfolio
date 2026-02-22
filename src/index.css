@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --font-jersey: "Jersey 15", cursive;
+    --color-win-bg: #1a1525;
+    --color-win-surface: #2a2135;
+    --color-win-header: #3d3148;
+    --color-win-text: #f5e6ff;
+    --color-win-highlight: #5a4a6a;
+    --color-win-shadow: #0f0c14;
+    --color-win-accent: #ff4d8d;
+    --color-win-taskbar: #221b2e;
+    --color-win-secondary: #ff85a1;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -10,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: var(--font-retro);
+  font-family: var(--font-jersey);
   background-color: #1a1525;
   color: #f5e6ff;
   height: 100vh;
@@ -128,6 +145,16 @@ body {
 
   50% {
     text-shadow: 0 0 15px currentColor, 0 0 25px currentColor;
+  }
+}
+
+@layer utilities {
+  .font-jersey {
+    font-family: "Jersey 15", cursive;
+  }
+
+  .font-win-font {
+    font-family: "Jersey 15", cursive;
   }
 }
 

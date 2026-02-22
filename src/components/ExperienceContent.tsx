@@ -7,7 +7,7 @@ const ExperienceContent = () => {
             <div className="experience-header">
                 <div className="job-title-wrapper">
                     <div className="job-icon-box win-outset">
-                        <Briefcase size={20} className="text-white" />
+                        <Briefcase size={28} className="text-white" />
                     </div>
                     <div className="job-details">
                         <h2 className="job-role">Front-End Developer</h2>
@@ -30,7 +30,7 @@ const ExperienceContent = () => {
                             "Collaborated with designers and stakeholders"
                         ].map((task, i) => (
                             <li key={i} className="task-item group">
-                                <CheckCircle2 size={14} className="task-icon" />
+                                <CheckCircle2 size={16} className="task-icon" />
                                 <span>{task}</span>
                             </li>
                         ))}

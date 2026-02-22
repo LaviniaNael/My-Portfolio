@@ -33,7 +33,7 @@
 }
 
 .icon-label {
-    @apply text-[11px] text-center text-win-text font-medium leading-tight transition-colors;
+    @apply text-base text-center tracking-wider text-win-text transition-colors;
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
 }
 

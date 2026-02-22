@@ -18,7 +18,7 @@ export default {
         'win-secondary': '#ff85a1',
       },
       fontFamily: {
-        'retro': ['Tahoma', '"MS Sans Serif"', 'Verdana', '"Segoe UI"', 'system-ui', '-apple-system', 'sans-serif'],
+        'jersey': ['"Jersey 15"', 'cursive'],
       },
       animation: {
         'shimmer': 'shimmer 3s ease-in-out infinite',

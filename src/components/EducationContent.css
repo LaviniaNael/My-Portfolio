@@ -11,23 +11,23 @@
 }
 
 .degree-info {
-    @apply flex flex-col gap-1;
+    @apply flex flex-col;
 }
 
 .degree-title {
-    @apply text-xl font-bold text-win-text;
+    @apply text-2xl tracking-wider text-win-text;
 }
 
 .degree-major {
-    @apply text-win-accent font-bold;
+    @apply text-xl text-win-accent;
 }
 
 .degree-meta {
-    @apply flex items-center gap-2 text-xs text-win-text/40;
+    @apply flex items-center gap-2 text-sm text-win-text/40;
 }
 
 .degree-faculty {
-    @apply text-xs text-win-text/40 italic;
+    @apply text-sm text-win-text/40 italic;
 }
 
 .coursework-section {
@@ -35,7 +35,7 @@
 }
 
 .section-label {
-    @apply text-[10px] font-bold uppercase tracking-widest text-win-text/40 border-b border-win-highlight/10 pb-1;
+    @apply text-sm uppercase tracking-widest text-win-text/40 border-b border-win-highlight/10 pb-1;
 }
 
 .coursework-list {
@@ -51,13 +51,13 @@
 }
 
 .course-title {
-    @apply text-sm font-bold text-win-text/90;
+    @apply text-base text-win-text/90;
 }
 
 .course-desc {
-    @apply text-[10px] text-win-text/50;
+    @apply text-sm text-win-text/50;
 }
 
 .education-quote {
-    @apply p-3 bg-win-accent/5 italic text-[11px] text-win-text/70 border-l-4 border-win-accent;
+    @apply p-3 bg-win-accent/5 italic text-sm text-win-text/70 border-l-4 border-win-accent;
 }

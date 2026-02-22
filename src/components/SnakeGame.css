@@ -51,7 +51,7 @@
 }
 
 .new-high-score {
-    @apply text-yellow-400 text-[10px];
+    @apply text-yellow-400 text-xs;
 }
 
 .play-again-btn {
@@ -63,7 +63,7 @@
 }
 
 .difficulty-label {
-    @apply text-win-text/40 text-[10px] mb-2;
+    @apply text-win-text/40 text-xs mb-2;
 }
 
 .difficulty-options {
@@ -75,11 +75,11 @@
 }
 
 .difficulty-desc {
-    @apply text-[9px] opacity-60;
+    @apply text-xs opacity-60;
 }
 
 .high-scores-summary {
-    @apply mt-3 text-[9px] text-win-text/50 text-center;
+    @apply mt-3 text-xs text-win-text/50 text-center;
 }
 
 .high-scores-list {
@@ -87,7 +87,7 @@
 }
 
 .controls-hint {
-    @apply text-[10px] text-win-text/40 text-center;
+    @apply text-xs text-win-text/40 text-center;
 }
 
 .mobile-controls {

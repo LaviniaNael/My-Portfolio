@@ -60,11 +60,11 @@
 }
 
 .warning-italic {
-    @apply text-[11px] leading-relaxed italic;
+    @apply text-xs leading-relaxed italic;
 }
 
 .warning-pro-tip {
-    @apply flex items-center gap-2 text-[11px] font-bold text-win-secondary;
+    @apply flex items-center gap-2 text-xs font-bold text-win-secondary;
 }
 
 .tip-dot {

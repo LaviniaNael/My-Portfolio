@@ -19,11 +19,11 @@
 }
 
 .job-role {
-    @apply text-lg font-bold text-win-text;
+    @apply text-2xl text-win-text;
 }
 
 .job-company {
-    @apply text-sm text-win-accent font-bold;
+    @apply text-xl text-win-accent;
 }
 
 .job-timeline {
@@ -31,7 +31,7 @@
 }
 
 .timeline-text {
-    @apply text-xs font-mono text-win-text/50;
+    @apply text-sm tracking-wide text-win-text/50;
 }
 
 .experience-grid {
@@ -43,19 +43,19 @@
 }
 
 .exp-section-title {
-    @apply text-[10px] font-bold uppercase tracking-[0.2em] text-win-text/40;
+    @apply text-sm uppercase tracking-[0.1em] text-win-text/70;
 }
 
 .task-list {
-    @apply flex flex-col gap-3 list-none p-0 m-0;
+    @apply flex flex-col gap-2 list-none p-0 m-0;
 }
 
 .task-item {
-    @apply flex gap-3 text-xs text-win-text/80;
+    @apply flex gap-2 text-sm tracking-wide text-win-text/80;
 }
 
 .task-icon {
-    @apply text-win-accent/50 mt-0.5 transition-colors group-hover:text-win-accent;
+    @apply text-win-accent/50 mt-1 transition-colors group-hover:text-win-accent;
 }
 
 .workflow-list {
@@ -71,9 +71,9 @@
 }
 
 .workflow-label {
-    @apply text-[11px] font-bold;
+    @apply text-base tracking-wide;
 }
 
 .workflow-desc {
-    @apply text-[9px] text-win-text/40;
+    @apply text-sm text-win-text/40;
 }

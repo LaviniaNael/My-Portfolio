@@ -7,7 +7,7 @@
 }
 
 .start-button-label {
-    @apply font-bold text-sm text-win-text italic tracking-tighter;
+    @apply text-lg text-win-text italic tracking-wider;
 }
 
 .taskbar-divider {
@@ -46,11 +46,11 @@
 }
 
 .window-tab-title {
-    @apply text-[10px] uppercase tracking-tighter truncate text-win-text/40;
+    @apply text-lg uppercase tracking-wider truncate text-win-text/40;
 }
 
 .window-tab-active .window-tab-title {
-    @apply font-bold text-win-text;
+    @apply text-win-text;
 }
 
 .tray-area {
@@ -70,5 +70,5 @@
 }
 
 .tray-time {
-    @apply text-[10px] font-bold text-win-text/80 font-mono;
+    @apply text-xs text-win-text/80 font-mono;
 }

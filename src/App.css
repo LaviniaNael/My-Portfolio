@@ -1,5 +1,9 @@
+.font-jersey {
+  font-family: "Jersey 15", cursive;
+}
+
 .app-container {
-  @apply relative h-screen w-screen bg-win-bg overflow-hidden font-retro selection:bg-win-accent selection:text-white;
+  @apply relative h-screen w-screen bg-win-bg overflow-hidden font-jersey selection:bg-win-accent selection:text-white;
 }
 
 /* Ambient Background Decorations */
@@ -121,7 +125,7 @@
 }
 
 .header-text-sub {
-  @apply text-[9px] opacity-90 font-normal;
+  @apply text-xs opacity-90 font-normal;
 }
 
 .start-menu-content {
@@ -139,11 +143,11 @@
 }
 
 .section-title {
-  @apply font-bold text-[10px] uppercase;
+  @apply font-bold text-xs uppercase;
 }
 
 .status-text {
-  @apply text-[11px] leading-relaxed;
+  @apply text-xs leading-relaxed;
 }
 
 .status-name {
@@ -160,12 +164,12 @@
 }
 
 .tech-badge {
-  @apply text-[10px] text-white px-2 py-1 font-bold;
+  @apply text-xs text-white px-2 py-1 tracking-wider;
   background-color: var(--color-win-surface);
 }
 
 .action-btn {
-  @apply w-full flex items-center gap-3 px-2 py-2 text-[11px] font-bold uppercase tracking-tight transition-colors;
+  @apply w-full flex items-center gap-3 px-2 py-2 text-xs font-bold uppercase tracking-tight transition-colors;
   background-color: var(--color-win-surface);
 }
 
@@ -191,6 +195,6 @@
 }
 
 .theme-toggle-text {
-  @apply text-[9px];
+  @apply text-xs;
   opacity: 0.7;
 }

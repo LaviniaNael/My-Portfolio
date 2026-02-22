@@ -36,7 +36,7 @@
 }
 
 .window-title-text {
-    @apply text-[11px] font-bold antialiased truncate max-w-[200px] uppercase tracking-tighter;
+    @apply text-lg antialiased truncate max-w-[200px] uppercase tracking-wider;
 }
 
 .window-title-text-active {
@@ -72,7 +72,7 @@
 }
 
 .window-footer {
-    @apply h-6 mx-1 mb-1 px-1 flex items-center gap-2 text-[9px] font-bold text-win-text/40 bg-win-surface;
+    @apply h-6 mx-1 mb-1 px-1 flex items-center gap-2 text-sm text-win-text/40 bg-win-surface;
 }
 
 .status-bar-item {

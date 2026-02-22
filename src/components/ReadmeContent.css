@@ -23,12 +23,12 @@
 }
 
 .hero-title {
-    @apply text-3xl w-full font-bold tracking-tighter uppercase italic text-transparent bg-clip-text bg-gradient-to-r from-win-accent via-win-secondary to-win-accent animate-shimmer;
+    @apply text-3xl w-full tracking-wider uppercase italic text-transparent bg-clip-text bg-gradient-to-r from-win-accent via-win-secondary to-win-accent animate-shimmer;
     /* background-size: 200% auto; */
 }
 
 .hero-subtitle {
-    @apply italic opacity-80 max-w-xl leading-relaxed;
+    @apply italic text-lg opacity-80 max-w-xl leading-relaxed;
 }
 
 .hero-divider {
@@ -52,11 +52,11 @@
 }
 
 .card-title {
-    @apply text-lg font-bold italic uppercase tracking-wider;
+    @apply text-lg italic uppercase tracking-wider;
 }
 
 .card-content {
-    @apply flex flex-col gap-3 text-sm leading-relaxed;
+    @apply flex flex-col gap-3 text-lg tracking-wider;
 }
 
 .accent-text {
@@ -64,15 +64,15 @@
 }
 
 .secondary-bold {
-    @apply underline underline-offset-4 font-bold decoration-win-secondary;
+    @apply underline underline-offset-4 decoration-win-secondary;
 }
 
 .dim-text {
-    @apply italic text-xs opacity-70;
+    @apply italic text-sm opacity-70;
 }
 
 .info-list {
-    @apply bg-win-bg/50 p-3 text-[11px] flex flex-col gap-2;
+    @apply bg-win-bg/50 p-3 text-sm flex flex-col gap-2;
 }
 
 .list-item {
@@ -104,7 +104,7 @@
 }
 
 .divider-title {
-    @apply text-2xl font-bold italic uppercase tracking-[0.3em] opacity-50;
+    @apply text-2xl italic uppercase tracking-[0.3em] opacity-50;
 }
 
 .why-retro-list {
@@ -128,11 +128,11 @@
 }
 
 .why-retro-title {
-    @apply font-bold text-sm tracking-tight;
+    @apply text-lg tracking-wider;
 }
 
 .why-retro-desc {
-    @apply text-xs opacity-70 leading-relaxed;
+    @apply text-base opacity-70 leading-relaxed;
 }
 
 .built-with-card {
@@ -149,7 +149,7 @@
 }
 
 .built-with-title {
-    @apply text-xl font-bold italic uppercase tracking-widest mb-6 flex items-center justify-center gap-3;
+    @apply text-xl italic uppercase tracking-widest mb-6 flex items-center justify-center gap-3;
 }
 
 .tech-tags-wrapper {
@@ -157,7 +157,7 @@
 }
 
 .tech-tag {
-    @apply px-4 py-1.5 bg-win-bg text-xs font-bold tracking-wider transition-colors hover:text-win-accent;
+    @apply px-4 py-1.5 bg-win-bg text-sm tracking-wider transition-colors hover:text-win-accent;
 }
 
 .readme-footer {
@@ -165,11 +165,11 @@
 }
 
 .footer-love {
-    @apply text-sm;
+    @apply text-sm tracking-[0.1em];
 }
 
 .footer-name {
-    @apply text-[10px] uppercase tracking-[0.4em];
+    @apply text-sm uppercase tracking-[0.1em];
 }
 
 .text-blue-icon {

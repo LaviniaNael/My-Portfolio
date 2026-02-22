@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Heart, Sparkles, Code2, Monitor, MousePointer2, Layout, Palette } from 'lucide-react';
 import './ReadmeContent.css';
 
@@ -36,8 +36,8 @@ const ReadmeContent: React.FC = () => {
                         <h2 className="card-title">Who am I?</h2>
                     </div>
                     <div className="card-content">
-                        <p>Hi, I’m <strong className="accent-text">Lavinia Nael Alfons 💗🦋</strong></p>
-                        <p>A Front-End Developer who loves mixing <span className="secondary-bold font-bold">logic with aesthetics</span>.</p>
+                        <p>Hi, I’m <strong className="text-pink-400">Lavinia Nael Alfons 💗🦋</strong></p>
+                        <p>A Front-End Developer who loves mixing <span className="secondary-bold text-pink-300">logic with aesthetics</span>.</p>
                         <p className="dim-text">
                             I come from a Mathematics & Computer Science background, but my heart is always leaning toward design, colors, and ✨ vibes ✨.
                         </p>
@@ -93,7 +93,7 @@ const ReadmeContent: React.FC = () => {
                         }
                     ].map((item, idx) => (
                         <div key={idx} className="why-retro-item win-inset group">
-                            <item.icon className={`why-retro-icon ${item.color}`} size={24} />
+                            <item.icon className={`why-retro-icon ${item.color}`} size={26} />
                             <div className="why-retro-details">
                                 <h3 className="why-retro-title">{item.title}</h3>
                                 <p className="why-retro-desc">{item.desc}</p>

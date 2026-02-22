@@ -7,7 +7,7 @@
 }
 
 .projects-path-text {
-    @apply text-xs font-mono font-bold;
+    @apply text-sm tracking-wider;
 }
 
 .projects-grid {
@@ -35,11 +35,11 @@
 }
 
 .project-title {
-    @apply font-bold text-win-text text-base mb-1;
+    @apply text-win-text text-xl tracking-wider mb-1;
 }
 
 .project-desc {
-    @apply text-[10px] text-win-text/60 mb-3 line-clamp-2 h-8 leading-tight;
+    @apply text-sm text-win-text/60 mb-3 line-clamp-2 tracking-wider h-8 leading-tight;
 }
 
 .project-tech-list {
@@ -47,5 +47,5 @@
 }
 
 .tech-badge {
-    @apply px-1.5 py-0.5 bg-black/40 text-[9px] font-mono border border-win-highlight/10 text-win-accent/80;
+    @apply px-1.5 py-0.5 bg-black/40 text-sm border border-win-highlight/10 text-win-accent/80;
 }

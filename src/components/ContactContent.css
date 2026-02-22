@@ -11,7 +11,7 @@
 }
 
 .protocol-header {
-    @apply text-sm font-bold text-win-accent mb-4 uppercase tracking-widest;
+    @apply text-base text-win-accent mb-4 uppercase tracking-widest;
 }
 
 .protocol-items {
@@ -35,11 +35,11 @@
 }
 
 .protocol-label {
-    @apply text-[9px] font-bold text-win-text/60 uppercase;
+    @apply text-sm text-win-text/60 uppercase;
 }
 
 .protocol-value {
-    @apply text-xs text-win-text block truncate hover:text-win-accent;
+    @apply text-sm text-win-text block truncate hover:text-win-accent;
 }
 
 .social-links {
@@ -47,7 +47,7 @@
 }
 
 .social-button {
-    @apply flex-1 h-10 bg-win-surface flex items-center justify-center gap-2 text-xs font-bold transition-all no-underline text-inherit hover:bg-win-accent hover:text-white;
+    @apply flex-1 h-10 bg-win-surface flex items-center justify-center gap-2 text-sm transition-all no-underline hover:bg-win-accent hover:text-white tracking-wider;
 }
 
 .form-section {
@@ -55,7 +55,7 @@
 }
 
 .form-header {
-    @apply text-xs font-bold text-win-text/40 italic flex items-center gap-2;
+    @apply text-sm tracking-wider text-win-text/90 italic flex items-center gap-2;
 }
 
 .success-message {
@@ -63,15 +63,15 @@
 }
 
 .success-title {
-    @apply text-sm text-win-accent font-bold uppercase tracking-widest mb-2;
+    @apply text-base text-win-accent uppercase tracking-widest mb-2;
 }
 
 .success-body {
-    @apply text-xs text-win-text/80 leading-relaxed font-mono;
+    @apply text-sm text-win-text/80 leading-relaxed;
 }
 
 .reset-button {
-    @apply mt-4 text-[10px] font-bold text-win-accent uppercase hover:underline;
+    @apply mt-4 text-sm text-win-accent uppercase hover:underline;
 }
 
 .contact-form {
@@ -83,19 +83,19 @@
 }
 
 .form-input {
-    @apply w-full h-8 bg-black/40 px-2 text-xs outline-none border-none text-win-text focus:ring-1 focus:ring-win-accent;
+    @apply w-full h-8 bg-black/40 px-2 text-sm outline-none border-none text-win-text focus:ring-1 focus:ring-win-accent;
 }
 
 .form-textarea {
-    @apply w-full h-24 bg-black/40 p-2 text-xs outline-none border-none text-win-text resize-none focus:ring-1 focus:ring-win-accent;
+    @apply w-full h-24 bg-black/40 p-2 text-sm outline-none border-none text-win-text resize-none focus:ring-1 focus:ring-win-accent;
 }
 
 .validation-error {
-    @apply text-[10px] text-red-400 font-mono;
+    @apply text-sm text-red-400;
 }
 
 .submit-button {
-    @apply w-full h-10 bg-win-surface flex items-center justify-center gap-3 font-bold transition-all disabled:opacity-50 disabled:cursor-wait hover:enabled:bg-win-accent hover:enabled:text-white;
+    @apply w-full h-10 bg-win-surface flex items-center justify-center gap-3 transition-all disabled:opacity-50 disabled:cursor-wait hover:enabled:bg-win-accent hover:enabled:text-white tracking-widest;
 }
 
 .submit-icon {
@@ -103,5 +103,5 @@
 }
 
 .error-tunnel-msg {
-    @apply text-[10px] text-red-400 font-mono text-center uppercase;
+    @apply text-sm text-red-400 text-center uppercase;
 }

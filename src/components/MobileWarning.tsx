@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Monitor, Heart, Sparkles, X } from 'lucide-react';
 import './MobileWarning.css';
 
@@ -41,7 +41,7 @@ const MobileWarning: React.FC<MobileWarningProps> = ({ onClose }) => {
                     </div>
 
                     <div className="warning-tip-box win-inset">
-                        <p className="warning-italic italic">
+                        <p className="warning-italic italic ">
                             "For the best experience, I recommend viewing this on a desktop. But don't worry, you can still explore here!"
                         </p>
                         <div className="warning-pro-tip font-bold">
